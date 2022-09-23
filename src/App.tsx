@@ -60,7 +60,63 @@ const ProjectsComponent: React.FC<IProjectsComponentProps> = ({ title, list }) =
     </div>
   );
 };
-
+const languages = ['English', 'Ukrainian', 'russian'];
+const LanguagesComponent: React.FC<{ title: string; ul: string[] }> = (props) => {
+  return (
+    <div>
+      <h3 className="languages">{props.title} :</h3>
+      <ul className="language-item">
+        {props.ul.map((value) => {
+          return (
+            <li key={value} className="language-item">
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+interface IDetailsComponentProps {
+  title: string;
+  list: { id: string; lable: string; link?: string }[];
+}
+const details: IDetailsComponentProps = {
+  title: 'DETAILS',
+  list: [
+    {
+      id: '1',
+      lable: '03730 Javea Alicante',
+    },
+    {
+      id: '2',
+      lable: 'iryna.hamoum@hotmail.com',
+      link: 'mailto:iryna.hamoum@hotmail.com',
+    },
+    {
+      id: '3',
+      lable: '+34656312174',
+      link: 'tel:+34656312174',
+    },
+  ],
+};
+const DetailsComponent: React.FC<IDetailsComponentProps> = (props) => {
+  return (
+    <div className="details">
+      <h3 className="details-title"> {props.title}:</h3>
+      <ul className="details-list">
+        {props.list.map((item) => {
+          return (
+            <li key={item.id} className="details-item">
+              {!item.link && item.lable}
+              {item.link && <a href={item.link}>{item.lable}</a>}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
 const App: React.FC = () => {
   // <script>
   //     const openBtn = document.getElementById("JS_OPEN_MODAL");
@@ -82,15 +138,7 @@ const App: React.FC = () => {
           <div className="photo">
             <img src="/img/./pic3.jpg" alt="pic3.jpg" />
           </div>
-          <div className="details">
-            <h3 className="details-title"> DETAILS:</h3>
-            <ul className="details-list">
-              <li className="details-item">03730 Javea </li>
-              <li className="details-item">Alicante</li>
-              <li className="details-item">iryna.hamoum@hotmail.com</li>
-              <li className="details-item">123456789</li>
-            </ul>
-          </div>
+          <DetailsComponent title={details.title} list={details.list} />
 
           {SKILS.map(({ title, list }) => {
             return <SkilComponent key={title} title={title} list={list} />;
@@ -108,14 +156,8 @@ const App: React.FC = () => {
           </p>
 
           <ProjectsComponent title={'Projects'} list={PROJECTS} />
-          <div>
-            <h3 className="languages">LANGUAGES :</h3>
-            <ul className="language-item">
-              <li>English</li>
-              <li>Ukrainian</li>
-              <li>Russian</li>
-            </ul>
-          </div>
+          <LanguagesComponent title={'Languages'} ul={languages} />
+
           <button id="JS_OPEN_MODAL" type="button">
             open modal
           </button>
