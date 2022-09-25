@@ -1,12 +1,15 @@
 import React from 'react';
+import DetailsComponent from './components/DetailsComponent';
+import WorksComponent from './components/WorksComponent';
+import { IData } from './types';
 interface ISkilItem {
   title: string;
   list: string[];
 }
 
 const SKILS: ISkilItem[] = [
-  { title: 'Hard skils', list: ['html', 'css', 'js', 'React'] },
-  { title: 'Soft skils', list: ['Agile', 'Scrum'] },
+  { title: 'Hard skils:', list: ['html', 'css', 'js', 'React'] },
+  { title: 'Soft skils:', list: ['Agile', 'Scrum'] },
 ];
 
 const SkilComponent: React.FC<ISkilItem> = ({ title, list }) => {
@@ -44,7 +47,7 @@ const ProjectsComponent: React.FC<IProjectsComponentProps> = ({ title, list }) =
   return (
     <div>
       <h3 className="projects">{title}</h3>
-      <ul className="projects-item">
+      <ul className="projects-list">
         {list.map(({ id, name, link }) => {
           return (
             <li className="projects-item" key={id}>
@@ -60,12 +63,12 @@ const ProjectsComponent: React.FC<IProjectsComponentProps> = ({ title, list }) =
     </div>
   );
 };
-const languages = ['English', 'Ukrainian', 'russian'];
+
 const LanguagesComponent: React.FC<{ title: string; ul: string[] }> = (props) => {
   return (
     <div>
       <h3 className="languages">{props.title} :</h3>
-      <ul className="language-item">
+      <ul className="language-list">
         {props.ul.map((value) => {
           return (
             <li key={value} className="language-item">
@@ -77,45 +80,60 @@ const LanguagesComponent: React.FC<{ title: string; ul: string[] }> = (props) =>
     </div>
   );
 };
-interface IDetailsComponentProps {
-  title: string;
-  list: { id: string; lable: string; link?: string }[];
-}
-const details: IDetailsComponentProps = {
-  title: 'DETAILS',
-  list: [
-    {
-      id: '1',
-      lable: '03730 Javea Alicante',
-    },
-    {
-      id: '2',
-      lable: 'iryna.hamoum@hotmail.com',
-      link: 'mailto:iryna.hamoum@hotmail.com',
-    },
-    {
-      id: '3',
-      lable: '+34656312174',
-      link: 'tel:+34656312174',
-    },
-  ],
-};
-const DetailsComponent: React.FC<IDetailsComponentProps> = (props) => {
-  return (
-    <div className="details">
-      <h3 className="details-title"> {props.title}:</h3>
-      <ul className="details-list">
-        {props.list.map((item) => {
-          return (
-            <li key={item.id} className="details-item">
-              {!item.link && item.lable}
-              {item.link && <a href={item.link}>{item.lable}</a>}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+
+const data: IData = {
+  details: {
+    title: 'DETAILS',
+    list: [
+      {
+        id: '1',
+        lable: '03730 Javea Alicante',
+      },
+      {
+        id: '2',
+        lable: 'iryna.hamoum@hotmail.com',
+        link: 'mailto:iryna.hamoum@hotmail.com',
+      },
+      {
+        id: '3',
+        lable: '+34656312174',
+        link: 'tel:+34656312174',
+      },
+    ],
+  },
+  works: {
+    title: 'Work experiense:',
+    list: [
+      {
+        id: '1',
+        position: 'Front-End Developer',
+        organisation: 'Freelance',
+        period: 'September 2022 - up to NOW',
+        country: 'Spain',
+        responsabilities: ['Creating Websites', 'Adding new functionality to websites.'],
+      },
+      {
+        id: '2',
+        position: 'Front-End Developer',
+        organisation: 'Freelance',
+        period: 'September 2022 - up to NOW',
+        country: 'Spain',
+        responsabilities: ['Creating Websites', 'Adding new functionality to websites.'],
+      },
+      {
+        id: '3',
+        position: 'Front-End Developer',
+        organisation: 'Freelance',
+        period: 'September 2022 - up to NOW',
+        country: 'Spain',
+        responsabilities: ['Creating Websites', 'Adding new functionality to websites.'],
+      },
+    ],
+  },
+  languages: {
+    title: 'Languages:',
+    list: ['English', 'Ukrainian', 'russian'],
+  },
 };
 const App: React.FC = () => {
   // <script>
@@ -136,9 +154,9 @@ const App: React.FC = () => {
       <main className="container">
         <section className="sidebar">
           <div className="photo">
-            <img src="/img/./pic3.jpg" alt="pic3.jpg" />
+            <img src="/img/./new pic.jpg" alt="new pic.jpg" />
           </div>
-          <DetailsComponent title={details.title} list={details.list} />
+          <DetailsComponent title={data.details.title} list={data.details.list} />
 
           {SKILS.map(({ title, list }) => {
             return <SkilComponent key={title} title={title} list={list} />;
@@ -146,8 +164,10 @@ const App: React.FC = () => {
         </section>
         <section className="content">
           <h1 className="name">IRYNA HAMOUM</h1>
-          <ul className="programmer">PROGRAMMER</ul>
-          <p>
+          <ul className="programmer">
+            <i>PROGRAMMER</i>
+          </ul>
+          <p className="description">
             I am only a beginner with creative thinking and inexaustible desire to learn. Very
             patient and attentive to details. Emotionally intelligent and empathetic for others.
             Currently I am looking for a role in small team where i can grow and continue to learn
@@ -156,23 +176,10 @@ const App: React.FC = () => {
           </p>
 
           <ProjectsComponent title={'Projects'} list={PROJECTS} />
-          <LanguagesComponent title={'Languages'} ul={languages} />
-
-          <button id="JS_OPEN_MODAL" type="button">
-            open modal
-          </button>
+          <WorksComponent title={data.works.title} list={data.works.list} />
+          <LanguagesComponent title={data.languages.title} ul={data.languages.list} />
         </section>
       </main>
-
-      <div id="JS_MODAL" className="modal">
-        <div className="modal-content">
-          <div className="modal-header">
-            <div className="modal-title">first modal</div>
-            <div id="JS_CLOSE_MODAL">X</div>
-          </div>
-          <div style={{ width: 600 }} />
-        </div>
-      </div>
     </div>
   );
 };
