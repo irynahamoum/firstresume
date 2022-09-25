@@ -10,7 +10,7 @@ interface IProps {
 const WorksComponent: React.FC<IProps> = ({ title, list }) => {
   return (
     <div className="works">
-      <h4 className="works-title title">{title}</h4>
+      <h3 className="works-title">{title}</h3>
       {list.map((work) => {
         return (
           <div key={work.id}>

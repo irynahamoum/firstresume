@@ -15,7 +15,7 @@ const DetailsComponent: React.FC<IProps> = (props) => {
           return (
             <li key={item.id} className="details-item">
               {!item.link && item.lable}
-              {item.link && <a href={item.link}>{item.lable}</a>}
+              {/*!!*/ item.link && <a href={item.link}>{item.lable}</a>}
             </li>
           );
         })}

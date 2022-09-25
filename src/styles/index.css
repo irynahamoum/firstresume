@@ -72,7 +72,7 @@
   gap: 24px;
 }
 .name {
-  color: rgb(151, 12, 142);
+  color: #a81f91;
   font-style: normal;
   font-weight: 700;
   font-size: 35px;
@@ -80,7 +80,7 @@
   margin-bottom: 25px;
 }
 .programmer {
-  color: rgb(187, 118, 214);
+  color: rgba(205, 95, 249, 0.914);
 }
 .description {
   font-style: normal;
@@ -167,16 +167,20 @@
   padding: 4px 20px;
 }
 .work {
-  margin-top: 50px;
-
-  padding-right: 40px;
+  width: 100%;
+}
+.works-title {
+  width: 100%;
+  color: rgb(136, 11, 161);
 }
 .position {
+  padding-top: 15px;
+  padding-left: 18px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
+  color: rgb(187, 118, 214);
   margin-bottom: 10px;
 }
 .organisation {
@@ -184,9 +188,11 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #fb6d3a;
+  padding-left: 10px;
+  color: #e60a8ade;
 }
 .period {
+  padding-left: 18px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -199,16 +205,16 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  color: #000000;
+  color: #412d47;
 }
 .work-list {
-  padding: 0;
-  margin-left: 15px;
+  list-style: none;
 }
 .work-list-item {
+  padding-left: 18px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #595959;
+  color: #580463e0;
 }
