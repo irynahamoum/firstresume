@@ -1,44 +1,12 @@
 import React from 'react';
-import { DetailsComponent, WorksComponent, LanguagesComponent, SkilComponent } from './components';
+import {
+  DetailsComponent,
+  WorksComponent,
+  LanguagesComponent,
+  SkilComponent,
+  ProjectsComponent,
+} from './components';
 import { IData } from './types';
-
-interface IProject {
-  id: string;
-  name: string;
-  link: string;
-}
-const PROJECTS: IProject[] = [
-  {
-    id: '1',
-    name: 'Resume',
-    link: 'www.google.com',
-  },
-];
-
-interface IProjectsComponentProps {
-  title: string;
-  list: IProject[];
-}
-const ProjectsComponent: React.FC<IProjectsComponentProps> = ({ title, list }) => {
-  return (
-    <div>
-      <h3 className="projects">{title}</h3>
-      <ul className="projects-list">
-        {list.map(({ id, name, link }) => {
-          return (
-            <li className="projects-item" key={id}>
-              <span className="projects-item_title">{name}</span>
-              <div className="dotted" />
-              <span className="projects-item_link">
-                <a href={`//${link}`}>link</a>
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
 
 const data: IData = {
   details: {
@@ -110,6 +78,16 @@ const data: IData = {
     { title: 'Hard skils:', list: ['html', 'css', 'js', 'React'] },
     { title: 'Soft skils:', list: ['Agile', 'Scrum'] },
   ],
+  projects: {
+    title: 'PROJECTS:',
+    list: [
+      {
+        id: '1',
+        name: 'Resume',
+        link: 'www.google.com',
+      },
+    ],
+  },
 };
 const App: React.FC = () => {
   // <script>
@@ -151,7 +129,7 @@ const App: React.FC = () => {
             science with experience working across full-stack of software development.
           </p>
 
-          <ProjectsComponent title={'Projects'} list={PROJECTS} />
+          <ProjectsComponent title={data.projects.title} list={data.projects.list} />
           <WorksComponent title={data.works.title} list={data.works.list} />
           <LanguagesComponent title={data.languages.title} list={data.languages.list} />
         </section>
