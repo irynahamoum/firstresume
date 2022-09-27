@@ -1,30 +1,7 @@
 import React from 'react';
-import { DetailsComponent, WorksComponent, LanguagesComponent } from './components';
+import { DetailsComponent, WorksComponent, LanguagesComponent, SkilComponent } from './components';
 import { IData } from './types';
-interface ISkilItem {
-  title: string;
-  list: string[];
-}
 
-const SKILS: ISkilItem[] = [
-  { title: 'Hard skils:', list: ['html', 'css', 'js', 'React'] },
-  { title: 'Soft skils:', list: ['Agile', 'Scrum'] },
-];
-
-const SkilComponent: React.FC<ISkilItem> = ({ title, list }) => {
-  return (
-    <div className="skils">
-      <h3 className="skils-title">{title}</h3>
-      <ul className="skils-list">
-        {list.map((item) => (
-          <li className="skils-item" key={item}>
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
 interface IProject {
   id: string;
   name: string;
@@ -129,6 +106,10 @@ const data: IData = {
     title: 'Languages:',
     list: ['English', 'Ukrainian', 'russian'],
   },
+  skils: [
+    { title: 'Hard skils:', list: ['html', 'css', 'js', 'React'] },
+    { title: 'Soft skils:', list: ['Agile', 'Scrum'] },
+  ],
 };
 const App: React.FC = () => {
   // <script>
@@ -153,7 +134,7 @@ const App: React.FC = () => {
           </div>
           <DetailsComponent title={data.details.title} list={data.details.list} />
 
-          {SKILS.map(({ title, list }) => {
+          {data.skils.map(({ title, list }) => {
             return <SkilComponent key={title} title={title} list={list} />;
           })}
         </section>

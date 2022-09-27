@@ -11,6 +11,10 @@ export interface IDetail {
   lable: string;
   link?: string;
 }
+export interface ISkilItem {
+  title: string;
+  list: string[];
+}
 
 export interface IData {
   details: {
@@ -25,4 +29,5 @@ export interface IData {
     title: string;
     list: string[];
   };
+  skils: ISkilItem[];
 }
