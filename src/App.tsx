@@ -1,6 +1,5 @@
 import React from 'react';
-import DetailsComponent from './components/DetailsComponent';
-import WorksComponent from './components/WorksComponent';
+import { DetailsComponent, WorksComponent, LanguagesComponent } from './components';
 import { IData } from './types';
 interface ISkilItem {
   title: string;
@@ -56,23 +55,6 @@ const ProjectsComponent: React.FC<IProjectsComponentProps> = ({ title, list }) =
               <span className="projects-item_link">
                 <a href={`//${link}`}>link</a>
               </span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
-
-const LanguagesComponent: React.FC<{ title: string; ul: string[] }> = (props) => {
-  return (
-    <div>
-      <h3 className="languages">{props.title} :</h3>
-      <ul className="language-list">
-        {props.ul.map((value) => {
-          return (
-            <li key={value} className="language-item">
-              {value}
             </li>
           );
         })}
@@ -190,7 +172,7 @@ const App: React.FC = () => {
 
           <ProjectsComponent title={'Projects'} list={PROJECTS} />
           <WorksComponent title={data.works.title} list={data.works.list} />
-          <LanguagesComponent title={data.languages.title} ul={data.languages.list} />
+          <LanguagesComponent title={data.languages.title} list={data.languages.list} />
         </section>
       </main>
     </div>
