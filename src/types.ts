@@ -6,6 +6,15 @@ export interface IWork {
   country: string;
   responsabilities: string[];
 }
+
+export interface IEducation {
+  id: string;
+  institution: string;
+  faculty: string;
+  period: string;
+  country: string;
+}
+
 export interface IDetail {
   id: string;
   lable: string;
@@ -23,6 +32,11 @@ export interface ISkilItem {
 }
 
 export interface IData {
+  name: string;
+  programmer: string;
+  description: string;
+  img: string;
+
   details: {
     title: string;
     list: IDetail[];
@@ -30,6 +44,10 @@ export interface IData {
   works: {
     title: string;
     list: IWork[];
+  };
+  education: {
+    title: string;
+    list: IEducation[];
   };
   languages: {
     title: string;
