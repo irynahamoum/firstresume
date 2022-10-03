@@ -56,18 +56,32 @@
 .skils {
   padding: 0 10px;
 }
-
-.skils-title {
-  color: white;
-}
-
 .skils-list {
   padding-left: 18px;
   list-style: none;
 }
-
+.skils-title {
+  color: white;
+}
 .skils-item {
   color: white;
+}
+
+.languages {
+  padding: 0 10px;
+  list-style: none;
+  width: 100%;
+  color: white;
+}
+.language-list {
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 18px;
+}
+.language-item {
+  /* width: 100%; */
+  color: white;
+  padding: 4px;
 }
 
 .content {
@@ -83,7 +97,7 @@
   font-weight: 700;
   font-size: 35px;
   line-height: 45px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 .programmer {
   color: rgba(205, 95, 249, 0.914);
@@ -92,8 +106,9 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  width: 400px;
+  line-height: 21px;
+  width: 500px;
+
   color: rgb(151, 12, 142);
 }
 .projects {
@@ -153,25 +168,6 @@
   left: 0;
   background: rgb(187, 118, 214);
 }
-.languages {
-  list-style: none;
-  width: 100%;
-  color: rgb(136, 11, 161);
-}
-.language-list {
-  list-style: none;
-  gap: 8px;
-  padding-top: 10px;
-  padding-left: 18px;
-  display: flex;
-}
-.language-item {
-  /* width: 100%; */
-  border: 1px solid #000;
-  border-radius: 4px;
-  color: rgb(187, 118, 214);
-  padding: 4px 20px;
-}
 .work {
   width: 100%;
 }
@@ -185,7 +181,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   color: rgb(187, 118, 214);
   margin-bottom: 10px;
 }
@@ -193,7 +189,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   padding-left: 10px;
   color: #e60a8ade;
 }
@@ -221,30 +217,32 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 21px;
   color: #580463e0;
 }
 .education {
   width: 100%;
-  margin-top: 40px;
+
   color: rgb(136, 11, 161);
 }
 .educational-institution {
-  padding-left: 10px;
+  padding-top: 10px;
+  padding-left: 18px;
   color: rgb(187, 118, 214);
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 21px;
   margin-bottom: 10px;
 }
 .faculty {
   color: #e60a8ade;
-  margin-bottom: 10px;
+  padding-left: 18px;
+  margin-bottom: 5px;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 16px;
+  line-height: 18px;
 }
 .study-period {
   font-style: normal;

@@ -1,14 +1,14 @@
 import { IData } from '../types';
 
 const data: IData = {
-  name: 'IRIS IRIS',
-  programmer: 'PROGRAMMER',
+  name: 'ІРИНА ХАМОУМ',
+  programmer: 'Інтерфейсний розробник ',
   description:
-    'Experience in developing Web applications in JavaScript/ HTML / CSS. Have development experience using React.js and Node.js. I have good analytical skills.Attentive to details, target-orientated and self-motivated, self-disciplinated, like teamwork, have a good amount of creativity and willingness to look at things from unusual angle. I am fluent in English, written and spoken. Very patient. Emotionally intelligent and empathetic for others. My pursuit is continuous development. Currently I am looking for a role in small team where i can grow and continue to learn from other experienced team members. My career objective is to graduate in computer science and widen my experience working across full-stack of software development.',
+    'Досвід розробки веб-додатків на JavaScript/HTML/CSS. Мати досвід розробки з використанням React.js і Node.js. Маю добрі аналітичні здібності. Уважна до деталей, цілеспрямована і самовмотивована, самодисциплінована, люблю працювати в команді, маю велику кількість креативності та бажання дивитися на речі з незвичайного боку. Вільно володію англійською, письмовою та усною. Дуже терпляча. Емоційно розумна і чуйна до інших. Моє прагнення - постійний розвиток. Наразі я шукаю роботу в невеликій команді, де я зможу розвиватися та продовжувати вчитися в інших досвідчених членів команди. Моя кар’єрна мета — отримати диплом з інформатики та розширити мій досвід, працюючи над розробкою програмного забезпечення.',
   img: '/img/./new pic.jpg',
 
   details: {
-    title: 'DETAILS',
+    title: 'Контактні дані:',
     list: [
       {
         id: '1',
@@ -27,73 +27,73 @@ const data: IData = {
     ],
   },
   works: {
-    title: 'Work experiense:',
+    title: 'Досвід роботи:',
     list: [
       {
         id: '1',
-        position: 'Front-End Developer',
+        position: 'Інтерфейсний розробник',
         organisation: 'Freelance',
-        period: 'September 2022 - up to NOW',
-        country: 'Spain',
+        period: 'Вересень 2022 - До сьогодення',
+        country: 'Іспанія',
         responsabilities: [
-          'Creating Websites',
-          'Adding new functionality to websites.',
-          ' Adding design elements to Websites.',
-          'Participating in the development of an applications for shools, restaurants and Cafeterias.',
+          'Створення сайтів.',
+          'Додавання нових функцій на веб-сайти.',
+          'Додавання елементів дизайну на сайти.',
+          'Участь у розробці додатків для шкіл, ресторанів та кафетерій.',
         ],
       },
       {
         id: '2',
-        position: 'Translator',
+        position: 'Перекладач',
         organisation: 'Design ID Korea',
-        period: 'June 2018 - up to NOW',
-        country: 'Spain',
+        period: 'Червень 2018 - До сьогодення',
+        country: 'Іспанія',
         responsabilities: [
-          'Attending Conference calls and business-meetings, providing English-russian and English-Ukrainian translation.',
-          'English-Russian and English-Ukrainian translation of Contracts and Emails.',
+          'Участь у конференц-дзвінках та бізнес-зустрічах, надання англо-російського та англо-українського перекладу.',
+          'Англо-російський та англо-український переклад контрактів та електронних листів.',
         ],
       },
       {
         id: '3',
-        position: 'Administrator',
-        organisation: 'Ekvator solarium studio',
-        period: 'February 2013 - July 2013',
-        country: 'Ukraine',
+        position: 'Адміністратор ',
+        organisation: 'Студія соляріїв «Екватор» ',
+        period: ' Листопад 2013 - Липень 2013',
+        country: 'Київ, Україна',
         responsabilities: [
-          'Management and maintanence of solarium and sauna.',
-          'Reception of clients and attending the custumers needs.',
-          'Finantial responsability of money received.',
-          'Celling and marketing cosmetic goods.',
+          'Керування та обслуговування солярію та сауни.',
+          'Прийом клієнтів та обслуговування потреб клієнтів.',
+          'Фінансова відповідальність отриманих грошей.',
+          'Покриття та маркетинг косметичних товарів.',
         ],
       },
     ],
   },
   education: {
-    title: 'Education:',
+    title: 'Освіта:',
     list: [
       {
         id: '1',
-        institution: 'Collage of National University of Technology & Design.',
-        faculty: 'Hairdressing and decorative cosmetics.',
-        period: 'September 2006 - June 2009',
-        country: 'Ukraine',
+        institution: 'Коледж Київського Національного Університету Технологій та Дизайну',
+        faculty: 'Перукарське мистецтво і декоративна косметика',
+        period: 'Вересень 2006 - Червень 2009',
+        country: 'Київ, Україна',
       },
     ],
   },
   languages: {
-    title: 'Languages:',
-    list: ['English', 'Ukrainian', 'russian'],
+    title: 'Мови',
+    list: ['English', 'Українська', 'Русский'],
   },
   skils: [
-    { title: 'Hard skils:', list: ['html', 'css', 'js', 'React'] },
-    { title: 'Soft skils:', list: ['Agile', 'Scrum'] },
+    { title: 'Технічні навички', list: ['html', 'css', 'js', 'React'] },
+    { title: 'Соціальні навички:', list: ['Agile', 'Scrum'] },
   ],
   projects: {
-    title: 'PROJECTS:',
+    title: 'Проекти:',
     list: [
       {
         id: '1',
-        name: 'Resume',
+        name: 'Резюме',
         link: 'www.google.com',
       },
     ],

@@ -1,14 +1,5 @@
 import React from 'react';
-const localization: Record<string, { code: string; title: string }> = {
-  en: {
-    code: 'en',
-    title: 'English',
-  },
-  ua: {
-    code: 'ua',
-    title: 'Ukrainian',
-  },
-};
+import languages from '../languages';
 
 interface IProps {
   currentLocale: string;
@@ -18,8 +9,8 @@ interface IProps {
 const Localization: React.FC<IProps> = ({ currentLocale, setCurrentLocale }) => {
   return (
     <select value={currentLocale} onChange={({ target: { value } }) => setCurrentLocale(value)}>
-      {Object.keys(localization).map((key) => {
-        const item = localization[key];
+      {Object.keys(languages).map((key) => {
+        const item = languages[key];
 
         if (!item) return null;
 

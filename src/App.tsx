@@ -9,7 +9,7 @@ import {
   Localization,
 } from './components';
 import { IData } from './types';
-import * as mocks from './languages';
+import languages from './languages';
 
 const App: React.FC = () => {
   const [currentLocale, setCurrentLocale] = React.useState('en');
@@ -17,9 +17,7 @@ const App: React.FC = () => {
 
   React.useEffect(() => {
     const getData = async (): Promise<IData | null> => {
-      if (currentLocale === 'en') return mocks.EN;
-      if (currentLocale === 'ua') return mocks.UA;
-      return null;
+      return languages[currentLocale].data || null;
     };
 
     getData().then((data) => {
@@ -43,6 +41,7 @@ const App: React.FC = () => {
           {data.skils.map(({ title, list }) => {
             return <SkilComponent key={title} title={title} list={list} />;
           })}
+          <LanguagesComponent title={data.languages.title} list={data.languages.list} />
         </section>
         <section className="content">
           <h1 className="name">{data.name}</h1>
@@ -54,8 +53,6 @@ const App: React.FC = () => {
           <ProjectsComponent title={data.projects.title} list={data.projects.list} />
           <WorksComponent title={data.works.title} list={data.works.list} />
           <EducationComponent title={data.education.title} list={data.education.list} />
-
-          <LanguagesComponent title={data.languages.title} list={data.languages.list} />
         </section>
       </main>
     </div>

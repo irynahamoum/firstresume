@@ -81,7 +81,7 @@ const data: IData = {
     ],
   },
   languages: {
-    title: 'Languages:',
+    title: 'Languages',
     list: ['English', 'Ukrainian', 'russian'],
   },
   skils: [
