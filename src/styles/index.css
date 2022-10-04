@@ -6,15 +6,14 @@
 }
 
 .container {
-  border: 1px solid rgb(255, 247, 254);
   display: flex;
-  width: 796px;
+  width: 792px;
   height: 1120px;
+  overflow: hidden;
 }
 
 .sidebar {
   position: relative;
-
   padding: 36px 0 10px;
   background: rgb(187, 118, 214);
   height: 100%;
@@ -27,6 +26,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
 }
 .photo {
   width: 100%;

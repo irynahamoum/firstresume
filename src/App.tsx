@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import {
   DetailsComponent,
@@ -12,6 +14,7 @@ import { IData } from './types';
 import languages from './languages';
 
 const App: React.FC = () => {
+  const [isShow, setIsShow] = React.useState(false);
   const [currentLocale, setCurrentLocale] = React.useState('en');
   const [data, setData] = React.useState<IData | null>(null);
 
@@ -31,8 +34,15 @@ const App: React.FC = () => {
       <main className="container">
         <section className="sidebar">
           <div className="select-locale">
-            <Localization currentLocale={currentLocale} setCurrentLocale={setCurrentLocale} />
+            {isShow && (
+              <Localization currentLocale={currentLocale} setCurrentLocale={setCurrentLocale} />
+            )}
+            <div
+              style={{ width: 18, height: 18 }}
+              onClick={() => setIsShow((prevIsShow) => !prevIsShow)}
+            />
           </div>
+
           <div className="photo">
             <img src="/img/./new pic.jpg" alt="new pic.jpg" />
           </div>

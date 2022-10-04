@@ -8,7 +8,7 @@ const data: IData = {
   img: '/img/./new pic.jpg',
 
   details: {
-    title: 'Контактні дані:',
+    title: 'Контактні дані',
     list: [
       {
         id: '1',
