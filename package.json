@@ -3,6 +3,7 @@
   "author": "iryna",
   "license": "MIT",
   "version": "0.0.1",
+  "homepage": ".",
   "description": "React, TypeScript, ESLint",
   "keywords": [
     "React, TypeScript, ESLint"

@@ -44,7 +44,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="photo">
-            <img src="/img/./new pic.jpg" alt="new pic.jpg" />
+            <img src="/img/new_pic.jpg" alt="new pic.jpg" />
           </div>
           <DetailsComponent title={data.details.title} list={data.details.list} />
 
